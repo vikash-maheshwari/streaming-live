@@ -12,7 +12,7 @@ client = MongoClient(os.getenv("MONGO_URI"))
 db = client['overlays']
 collection = db['overlays']
 
-CORS(app, resources={r"/*": {"origins": "https://streaming-live-henna.vercel.app/"}})
+CORS(app, resources={r"/*": {"origins": "https://streaming-live-henna.vercel.app"}})
 
 
 
