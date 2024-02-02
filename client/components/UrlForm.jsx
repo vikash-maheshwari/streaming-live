@@ -29,7 +29,6 @@ const UrlForm = ({open,refresh,modalOpen}) => {
             Reset to default
           </button>
         </div>
-        <div className='italic text-md ml-3 mt-7'>try: https://rtsp.me/embed/EDfdG27D/</div>
       </div>
     </div>
   )
