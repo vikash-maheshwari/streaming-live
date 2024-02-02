@@ -51,5 +51,10 @@ def image():
     data = json_util.dumps(data)
     return data , 200
 
+@app.route('/', methods=['GET'])
+def root():
+    return jsonify({"message": "Server is running"}), 200
+
+
 if __name__ == '__main__':
     app.run(debug=False,host="0.0.0.0")
