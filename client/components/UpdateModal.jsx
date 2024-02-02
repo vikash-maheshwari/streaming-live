@@ -30,7 +30,7 @@ const Modal = ({open,onClose,data}) => {
         e.preventDefault()
         try {
             setLoading(true)
-            await axios.put(`http://192.168.29.84:5000/update/${data._id.$oid}`,updateForm)
+            await axios.put(`https://live-streaming-s939.onrender.com/update/${data._id.$oid}`,updateForm)
             toast.success('Updated Successfully')
         } catch (error) {
             console.log(error)

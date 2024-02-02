@@ -27,7 +27,7 @@ const Modal = ({open,onClose}) => {
         e.preventDefault()
         try {
             setLoading(true)
-            await axios.post('http://192.168.29.84:5000/post',overlayForm)
+            await axios.post('https://live-streaming-s939.onrender.com/post',overlayForm)
             toast.success('Created Successfully')
         } catch (error) {
             console.log(error)

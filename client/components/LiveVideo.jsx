@@ -8,9 +8,9 @@ const LiveVideo = ({videoUrl,open,modalOpen,refresh}) => {
 
   useEffect(()=>{
     const getOverlays = async ()=>{
-      const text = await axios.get('http://192.168.29.84:5000/text')
+      const text = await axios.get('https://live-streaming-s939.onrender.com/text')
       setTextOverlays(text.data)
-      const image = await axios.get('http://192.168.29.84:5000/image')
+      const image = await axios.get('https://live-streaming-s939.onrender.com/image')
       setImageOverlays(image.data)
     }
     getOverlays()

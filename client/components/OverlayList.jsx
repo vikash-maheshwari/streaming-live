@@ -24,7 +24,7 @@ const OverlayList = ({open,setOpen,modalOpen,setModalOpen,refresh,setRefresh}) =
   useEffect(() => {
     const getList = async () => {
       try {
-        const res = await axios.get('http://192.168.29.84:5000/get');
+        const res = await axios.get('https://live-streaming-s939.onrender.com/get');
         const data = await res.data
         setOverlayList(data);
       } catch (error) {
@@ -42,7 +42,7 @@ const OverlayList = ({open,setOpen,modalOpen,setModalOpen,refresh,setRefresh}) =
 
   const onDeleteClick = async(overlay) => {
     try {
-      await axios.delete(`http://192.168.29.84:5000/delete/${overlay._id.$oid}`)
+      await axios.delete(`https://live-streaming-s939.onrender.com/delete/${overlay._id.$oid}`)
       toast.success('Deleted overlay')
       setRefresh(prev=>prev+1)
       setLoading(true)
